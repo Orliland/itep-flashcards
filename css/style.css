@@ -27,30 +27,26 @@ body {
   transform-style: preserve-3d;
 }
 
-/* 
-.card:hover .card__inner {
-  transform: rotateY(180deg);
-}
-
-.card__front {
+.card {
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 2fr 2fr;
+
   width: calc(100% - 60px);
-  height: 100%;
+  height: calc(100% - 60px);
   padding: 30px;
-  background-color: #fff;
   border-radius: 40px;
+  background-color: #fff;
+
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.card__back {
-  background-color: #fff;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.card--front {
+  grid-template-rows: 1.5fr 2fr 2fr;
+}
+
+.card--back {
   transform: rotateY(180deg);
 }
 
@@ -102,4 +98,4 @@ body {
     color: #fff;
     background-color: #000;
   }
-} */
+}
