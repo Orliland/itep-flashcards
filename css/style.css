@@ -1,0 +1,64 @@
+body {
+  width: calc(100vw - 150px);
+  height: calc(100vh - 75px);
+  margin: 0px;
+  padding: 75px 75px 0px;
+  background-color: #000;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr 1fr;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  width: calc(100% - 60px);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.card__inner {
+  height: 100%;
+}
+
+.card__front {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 2fr 2fr;
+  height: 100%;
+}
+
+.card__subject {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card__title {
+  align-self: center;
+  justify-self: center;
+
+  max-width: 600px;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card__button {
+  align-self: start;
+
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 40px;
+
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border: 2px solid black;
+  border-radius: 10px;
+}
