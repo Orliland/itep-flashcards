@@ -106,6 +106,30 @@ body {
   animation-fill-mode: forwards;
 }
 
+.button__next {
+  justify-self: center;
+  align-self: center;
+
+  display: flex;
+  padding: 12px 18px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+
+.button__icon {
+  width: 25px;
+}
+
+.button__next:hover {
+  animation: change-btn 400ms;
+  animation-fill-mode: forwards;
+}
+
+.button__next:hover .button__icon {
+  animation: change-icon 400ms;
+  animation-fill-mode: forwards;
+}
+
 @keyframes change-bg {
   from {
     color: #000;
@@ -115,5 +139,24 @@ body {
   to {
     color: #fff;
     background-color: #000;
+  }
+}
+
+@keyframes change-btn {
+  from {
+    background-color: #000;
+  }
+
+  to {
+    background-color: #fff;
+  }
+}
+
+@keyframes change-icon {
+  from {
+  }
+
+  to {
+    filter: invert(1);
   }
 }
