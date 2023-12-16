@@ -62,3 +62,20 @@ body {
   border: 2px solid black;
   border-radius: 10px;
 }
+
+.card__button:hover {
+  animation: change-bg 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change-bg {
+  from {
+    color: #000;
+    border: 2px solid black;
+  }
+
+  to {
+    color: #fff;
+    background-color: #000;
+  }
+}
