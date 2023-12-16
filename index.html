@@ -27,5 +27,12 @@
         </div>
       </div>
     </div>
+    <script>
+      var btn_reverse = document.querySelector(".card__button");
+      var card_inner = document.querySelector(".card__inner");
+      btn_reverse.addEventListener("click", () => {
+        card_inner.style.transform = "rotateY(180deg)";
+      });
+    </script>
   </body>
 </html>
