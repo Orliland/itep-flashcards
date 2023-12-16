@@ -47,13 +47,22 @@ body {
 }
 
 .card--back {
+  grid-template-rows: auto 4fr;
   transform: rotateY(180deg);
+}
+
+.card__nav {
+  padding-bottom: 30px;
 }
 
 .card__subject {
   color: #000;
   font-size: 14px;
   font-weight: 700;
+}
+
+.card__subject--secondary {
+  color: rgb(188, 186, 186);
 }
 
 .card__title {
@@ -65,6 +74,15 @@ body {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
+}
+
+.card__content {
+  justify-self: center;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .card__button {
