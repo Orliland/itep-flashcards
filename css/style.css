@@ -1,5 +1,6 @@
 html {
   max-width: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -12,13 +13,11 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 5fr 1fr;
-
-  font-family: "Poppins", sans-serif;
 }
 
-.card {
+.card__flip {
   background-color: transparent;
-  perspective: 1000px;
+  perspective: 1000%;
 }
 
 .card__inner {
@@ -28,6 +27,7 @@ body {
   transform-style: preserve-3d;
 }
 
+/* 
 .card:hover .card__inner {
   transform: rotateY(180deg);
 }
@@ -102,4 +102,4 @@ body {
     color: #fff;
     background-color: #000;
   }
-}
+} */
