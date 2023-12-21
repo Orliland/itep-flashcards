@@ -11,26 +11,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.3/dist/showdown.min.js
+      "></script>
   </head>
   <body>
     <div class="card__flip">
       <div class="card__inner">
         <div class="card card--front">
           <div class="card__nav">
-            <span class="card__subject">Verb Forms</span>
+            <span class="card__subject subject">Lorem, ipsum.</span>
           </div>
-          <p class="card__title">Simple Present</p>
+          <p class="card__title title">Lorem, ipsum dolor.</p>
           <a href="#" class="card__button">Reverse</a>
         </div>
         <div class="card card--back">
           <div class="card__nav">
-            <span class="card__subject card__subject--secondary"
-              >Verb Forms / </span
-            ><span class="card__subject">Simple Present</span>
+            <span class="card__subject card__subject--secondary subject"
+              >Lorem, ipsum </span
+            ><span class="card__subject card__subject--secondary"> / </span
+            ><span class="card__subject title">Lorem, ipsum dolor.</span>
           </div>
           <div class="card__content">
-            <h1>Simple present explication</h1>
-            <p>
+            <h1 class="title">Lorem, ipsum dolor.</h1>
+            <p class="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -52,6 +55,39 @@
       btn_reverse.addEventListener("click", () => {
         card_inner.style.transform = "rotateY(180deg)";
       });
+
+      var converter = new showdown.Converter();
+
+      let db = {};
+
+      var subject = document.querySelectorAll(".subject");
+      var title = document.querySelectorAll(".title");
+      var content = document.querySelector(".content");
+
+      function drawCard(index) {
+        subject.forEach((element) => {
+          element.innerHTML = db[index].subject;
+        });
+
+        title.forEach((element) => {
+          element.innerHTML = db[index].title;
+        });
+
+        var text = "";
+        db[index].content.forEach((element) => {
+          text += element + "\n\n";
+        });
+        var converter = new showdown.Converter(),
+          html = converter.makeHtml(text);
+        content.innerHTML = html;
+      }
+
+      fetch("./assets/data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          db = data;
+          drawCard(0);
+        });
     </script>
   </body>
 </html>

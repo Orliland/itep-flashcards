@@ -1,0 +1,20 @@
+[
+  {
+    "subject": "Verb Forms",
+    "title": "Simple present",
+    "content": [
+      "El **simple present** esta formado por dos categorías de verbos, **be** y todos lo demás.",
+      "Para ambos casos se utilizan los pronombres: \n * I\n * You\n * He\n * She\n * It\n * We\n * They",
+      "Para los verbos que no son **be** se utiliza la siguiente estructura:\n * Sujeto + verbo + complemento",
+      "Si se trata de la tercera persona del singular se agrega una **s** al verbo\n * Sujeto + verbo + **s** + complemento",
+      "Para los verbos **be** se utiliza la siguiente estructura:\n * Sujeto + verbo + complemento",
+      "## Negative form\n",
+      "Para la forma negativa se utiliza el auxiliar **do** y **not**\n * Sujeto + do + not + verbo + complemento",
+      "Para el verbo **be** se utiliza la siguiente estructura:\n * Sujeto + verbo + not + complemento",
+      "## Interrogative form",
+      "Para la forma interrogativa se utiliza el auxiliar **do**\n * Do + sujeto + verbo + complemento",
+      "Si se trata de la tercera persona del singular se agrega una **s** al verbo\n * Does + sujeto + verbo + complemento",
+      "Para el verbo **be** se utiliza la siguiente estructura:\n * Verbo + sujeto + complemento"
+    ]
+  }
+]
