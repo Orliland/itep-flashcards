@@ -59,6 +59,7 @@
       var converter = new showdown.Converter();
 
       let db = {};
+      let i = 0;
 
       var subject = document.querySelectorAll(".subject");
       var title = document.querySelectorAll(".title");
@@ -80,6 +81,8 @@
         var converter = new showdown.Converter(),
           html = converter.makeHtml(text);
         content.innerHTML = html;
+
+        i = index;
       }
 
       fetch("./assets/data.json")
@@ -88,6 +91,12 @@
           db = data;
           drawCard(0);
         });
+
+      var btn_next = document.querySelector(".button__next");
+      btn_next.addEventListener("click", () => {
+        card_inner.style.transform = "rotateY(360deg)";
+        drawCard(i + 1);
+      });
     </script>
   </body>
 </html>
